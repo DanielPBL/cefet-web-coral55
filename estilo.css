@@ -19,6 +19,7 @@ body {
   font-size: 32px;
   color: #e90c0c;
   text-align: center;
+  padding-left: 90px;
 }
 
 #cabecalho h2 {
@@ -26,6 +27,7 @@ body {
   font-size: 24px;
   color: #333;
   text-align: right;
+  padding-right: 90px;
 }
 
 #cabecalho em {
@@ -40,9 +42,14 @@ body {
 #cardapio {
   box-sizing: border-box;
   width: 646px;
-  margin: 0 1px 0 154px;
+  height: 600px;
+  margin: 0 1px 0 153px;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #aac0ae;
+  line-height: 2em;
+  padding: 0 15px;
+  color: #333;
+  font-size: 14px;
 }
 
 #lateral {
@@ -51,13 +58,14 @@ body {
   box-sizing: border-box;
   width: 154px;
   height: 100%;
-  text-align: right;
 }
 
 #lateral h2 {
   position: absolute;
-  top: 50%;
+  top: 47%;
+  left: 50%;
   margin-top: -29px;
+  margin-left: -120px;
   font-size: 48px;
   color: #333;
   font-weight: bold;
@@ -71,11 +79,52 @@ body {
 }
 
 #lateral img[src*="bolhas"] {
-  margin-right: 20px;
+  position: relative;
+  left: 22px;
+  margin-top: 410px;
 }
 
 #lateral img[src*="peixe"] {
   position: relative;
   top: 14px;
   left: -47px;
+}
+
+#cardapio {
+  display: flex;
+  flex-direction: column;
+}
+
+.produto {
+  float: left;
+  clear: left;
+}
+
+.preco {
+  float: right;
+}
+
+#cardapio h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+#rodape {
+  text-align: right;
+}
+
+#rodape img {
+  margin: 46px 15px 25px 0;
+}
+
+#ticket {
+  position: fixed;
+  top: 295px;
+  left: -73px;
+  transition: left 100ms ease-out; /* propriedade, duração, interpolação */
+}
+
+#ticket:hover {
+  left: 0;
 }
