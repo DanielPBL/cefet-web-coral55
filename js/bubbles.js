@@ -3,7 +3,9 @@ function loadImage(path) {
     img.src = path;
     return img;
 }
+
 var bubbleEl = loadImage('images/bolha.png');
+
 function instantiateBubble() {
     var newBubbleEl = bubbleEl.cloneNode();
     newBubbleEl.style.position = 'fixed';
@@ -11,7 +13,7 @@ function instantiateBubble() {
     newBubbleEl.style.bottom = '-50px';
     newBubbleEl.style.left = Math.random() * window.innerWidth + 'px';
     newBubbleEl.style.opacity = 1;
-	newBubbleEl.style.transform = 'scale(' + (Math.random() / 2 + 0.5) + ')';
+	  newBubbleEl.style.transform = 'scale(' + (Math.random() / 2 + 0.5) + ')';
     newBubbleEl.style.zIndex = 10000;
 
     document.body.appendChild(newBubbleEl);

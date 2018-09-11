@@ -28,6 +28,7 @@ body {
   color: #333;
   text-align: right;
   padding-right: 90px;
+  margin-bottom: 5px;
 }
 
 #cabecalho em {
@@ -42,14 +43,34 @@ body {
 #cardapio {
   box-sizing: border-box;
   width: 646px;
-  height: 600px;
   margin: 0 1px 0 153px;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #aac0ae;
   line-height: 2em;
-  padding: 0 15px;
+  padding: 0 15px 50px 15px;
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto {
+  float: left;
+  clear: left;
+}
+
+.preco {
+  float: right;
+}
+
+#cardapio h3:not(:first-child) {
+  margin-top: 2em;
+}
+
+#cardapio h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 #lateral {
@@ -81,33 +102,13 @@ body {
 #lateral img[src*="bolhas"] {
   position: relative;
   left: 22px;
-  margin-top: 410px;
+  margin-top: 395px;
 }
 
 #lateral img[src*="peixe"] {
   position: relative;
   top: 14px;
   left: -47px;
-}
-
-#cardapio {
-  display: flex;
-  flex-direction: column;
-}
-
-.produto {
-  float: left;
-  clear: left;
-}
-
-.preco {
-  float: right;
-}
-
-#cardapio h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 2em;
 }
 
 #rodape {
